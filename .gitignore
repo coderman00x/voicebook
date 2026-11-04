@@ -1,0 +1,18 @@
+# 系统/编辑器垃圾
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# 本地临时文件
+*.log
+/tmp/
+tmp/
+
+# 不提交依赖/构建产物（本项目为纯静态，无这些目录，仅作防护）
+node_modules/
+dist/
+.venv/
+venv/

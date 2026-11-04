@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="听书 App 图标">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f7df6"/>
+      <stop offset="100%" stop-color="#1f5fd0"/>
+    </linearGradient>
+  </defs>
+  <rect x="64" y="64" width="384" height="384" rx="84" fill="url(#bg)"/>
+  <g fill="#ffffff">
+    <!-- 书外形 -->
+    <rect x="150" y="168" width="212" height="176" rx="14"/>
+    <rect x="256" y="168" width="106" height="176" rx="14" fill="#e9f0ff"/>
+    <!-- 书页线条 -->
+    <g stroke="#7aa0e6" stroke-width="10" stroke-linecap="round">
+      <line x1="176" y1="208" x2="232" y2="208"/>
+      <line x1="176" y1="240" x2="232" y2="240"/>
+      <line x1="176" y1="272" x2="232" y2="272"/>
+      <line x1="280" y1="208" x2="336" y2="208"/>
+      <line x1="280" y1="240" x2="336" y2="240"/>
+      <line x1="280" y1="272" x2="336" y2="272"/>
+    </g>
+    <!-- 扬声器/声波 -->
+    <circle cx="256" cy="392" r="20" fill="#ffd23f"/>
+    <g stroke="#ffd23f" stroke-width="10" stroke-linecap="round" fill="none">
+      <path d="M236 392 a20 20 0 0 1 0 -1"/>
+      <path d="M300 366 q34 26 0 52"/>
+      <path d="M322 344 q58 48 0 96"/>
+    </g>
+  </g>
+</svg>

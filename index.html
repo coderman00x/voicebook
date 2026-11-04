@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover 让内容延伸到刘海/底部安全区 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="听书" />
+    <meta name="theme-color" content="#1f5fd0" />
+    <title>听书 · ListenBook</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-title">📚 听书</h1>
+      <button id="import-btn" class="btn btn-primary">＋ 导入</button>
+    </header>
+
+    <!-- 不支持语音合成时的提示条 -->
+    <div id="unsupported" class="banner" style="display: none"></div>
+
+    <!-- 书架屏 -->
+    <main id="screen-library" class="screen active">
+      <div id="drop-zone" class="drop-zone">
+        <p class="drop-hint">把 txt / epub / pdf 拖到这里，或点右上角「导入」选择文件（可多选）</p>
+        <div id="shelf"></div>
+      </div>
+    </main>
+
+    <!-- 播放屏 -->
+    <main id="screen-player" class="screen">
+      <div class="now-wrap">
+        <div id="now-text" class="now-text"></div>
+      </div>
+      <div id="player-mount"></div>
+    </main>
+
+    <!-- 隐藏的文件选择器 -->
+    <input id="file-input" type="file" accept=".txt,.epub,.pdf" multiple hidden />
+
+    <!-- 本地 vendor 库（UMD，挂载到 window），必须在 module 之前加载以保证全局可用 -->
+    <script src="./vendor/jszip.min.js"></script>
+    <script src="./vendor/pdf.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
